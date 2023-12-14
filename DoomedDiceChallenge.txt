@@ -1,0 +1,60 @@
+Part A:
+
+Total combinations: The total combinations are calculated by multiplying the number of faces on Die A (6) by the number of faces on Die B (6), which gives us 36 combinations. This is based on the principle of counting in probability theory, where the total number of outcomes is the product of the number of outcomes for each individual event.
+
+Distribution of all possible combinations: To calculate the distribution of all possible combinations, we create a 6x6 matrix. Each cell in the matrix represents a combination of a face from Die A and a face from Die B. The value in the cell is the sum of the numbers on the two faces. This gives us a distribution of all possible sums when rolling the two dice.
+
+Probability of all possible sums: The probability of a particular sum is calculated by counting the number of combinations that result in that sum and dividing by the total number of combinations (36). This gives us the probability of each possible sum.
+
+Part B:
+
+The challenge in Part B is to rearrange the spots on the dice while maintaining the same probabilities as in Part A and adhering to Loki’s conditions. Here’s how we can do it:
+
+Die A: Loki’s condition states that Die A cannot have more than 4 spots on a face. So, we replace the faces with 5 and 6 spots with faces that have fewer spots. For example, we can replace the 5 and 6 with additional 1s and 2s. So, the new Die A could be [1, 2, 3, 4, 1, 2].
+
+Die B: Loki’s condition allows Die B to have as many spots on a face as necessary. To maintain the same probabilities, we need to compensate for the spots we removed from Die A. We removed a total of 4 spots (5 and 6 replaced with 1 and 2), so we can add these to Die B. For example, we can replace the 1 and 2 on Die B with 5 and 6. So, the new Die B could be [5, 6, 3, 4, 5, 6].
+
+This way, the sum of the spots on each face of Die A and Die B remains the same, so the probabilities should also remain the same. However, this is just one possible solution and there may be other ways to rearrange the spots on the dice while adhering to the conditions.
+
+********************************************************************
+
+Output for the doomedDiceChallenge 
+
+Total combinations: 36
+
+Distribution of all possible combinations:
+2 3 4 5 6 7 
+3 4 5 6 7 8
+4 5 6 7 8 9
+5 6 7 8 9 10
+6 7 8 9 10 11
+7 8 9 10 11 12
+
+Probability of all possible sums:
+P(Sum = 2) = 0.027777777777777776
+P(Sum = 3) = 0.05555555555555555
+P(Sum = 4) = 0.08333333333333333
+P(Sum = 5) = 0.1111111111111111
+P(Sum = 6) = 0.1388888888888889
+P(Sum = 7) = 0.16666666666666669
+P(Sum = 8) = 0.1388888888888889
+P(Sum = 9) = 0.1111111111111111
+P(Sum = 10) = 0.08333333333333333
+P(Sum = 11) = 0.05555555555555555
+P(Sum = 12) = 0.027777777777777776
+
+The old and new probabilities for comparison
+P(Sum = 2): 0.027777777777777776 -> 0.027777777777777776
+P(Sum = 3): 0.05555555555555555 -> 0.05555555555555555
+P(Sum = 4): 0.08333333333333333 -> 0.08333333333333333
+P(Sum = 5): 0.1111111111111111 -> 0.16666666666666669
+P(Sum = 6): 0.1388888888888889 -> 0.1388888888888889
+P(Sum = 7): 0.16666666666666669 -> 0.1388888888888889
+P(Sum = 8): 0.1388888888888889 -> 0.1111111111111111
+P(Sum = 9): 0.1111111111111111 -> 0.05555555555555555
+P(Sum = 10): 0.08333333333333333 -> 0.1111111111111111
+P(Sum = 11): 0.05555555555555555 -> 0.027777777777777776
+P(Sum = 12): 0.027777777777777776 -> 0.08333333333333333
+
+New_Die_A = [1, 2, 3, 4, 4, 4]
+New_Die_B = [1, 2, 3, 4, 6, 8]
